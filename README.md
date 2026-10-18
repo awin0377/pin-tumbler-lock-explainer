@@ -19,16 +19,29 @@ Dark theme: `lock-dark.html`.
 1. Installed the open-source **Anatomy** skill (`github.com/wheresryan22/anatomy`, MIT) into an AI coding agent.
 2. Wrote the brief: an interactive pin-tumbler cross-section with the interactions listed above.
 3. The agent produced the build scripts, the page, and its own browser checks.
-4. The agent ran its own browser checks, listed below under "What was checked".
+4. I reviewed the published page by hand; the agent also ran its own browser checks. Both are listed below under "What was checked".
 
-I did not write the rendering library. My part is the brief and the decision about what is safe to publish.
+I did not write the rendering library. My part is the brief, the review, and the decision about what is safe to publish.
 
 ## What was checked
+
+**Reviewed by me, by hand, on the published page**
+
+- Correct key: 5 / 5 pin stacks aligned, and turning moves the end-face indicator to 70°.
+- Wrong key: 3 / 5 aligned, and turning is blocked.
+- Clicking each pin: the explanation matches what is on screen.
+- Housing toggle between the exterior and the cross-section.
+- 390 px phone width.
+- Dark theme (`lock-dark.html`).
+
+**Run by the agent (automated browser checks)**
 
 - Interaction paths: correct key, wrong key, partially inserted key, turning, housing toggle, mouse and keyboard.
 - Both themes, reduced-motion preference, 390 px phone width, and the browser console.
 - A geometry audit of **52 recorded parts** in their starting pose: support, intersections, drawing order.
 - Screenshots of each state (`shots/`).
+
+Keyboard controls, reduced-motion behaviour, the partially inserted key and the browser console were covered by the agent's checks only, not by my manual pass.
 
 ## Limits (stated on purpose)
 
